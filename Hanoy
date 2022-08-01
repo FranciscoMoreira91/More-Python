@@ -1,0 +1,22 @@
+def hanoi(orig, tmp, dest, n):
+    if n > 0:
+        m = hanoi(orig, dest, tmp, n - 1);
+        print("\n", n, " ", orig, "->", dest, end="")
+        m = m + 1 + hanoi(tmp, orig, dest, n - 1);
+        return m
+
+    return 0
+
+if __name__ == "__main__":
+    d =  int(input("Discos : "))
+    mo = hanoi("A", "C", "B", d);
+
+
+def hanoi2(orig, tmp, dest, n):
+    for n in range(0, 10, 1):
+        return n / 10
+    print("\n", n, " ", orig, "->", dest, end="")
+
+if __name__ == "__main__":
+    d =  int(input("\nDiscos : "))
+    mo = hanoi2("A", "C", "B", d);
